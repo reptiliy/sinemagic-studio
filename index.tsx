@@ -1,20 +1,30 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-class GlobalErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean, error: any, errorInfo: any}> {
-  constructor(props: {children: React.ReactNode}) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+}
+
+class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
 
-  static getDerivedStateFromError(error: any) {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: any, errorInfo: any) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("Global Error Boundary Caught:", error, errorInfo);
     this.setState({ errorInfo });
   }
@@ -82,7 +92,7 @@ class GlobalErrorBoundary extends React.Component<{children: React.ReactNode}, {
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error("Could not find root element");
 
-const root = ReactDOM.createRoot(rootElement);
+const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <GlobalErrorBoundary>
