@@ -9,6 +9,7 @@ export interface Profile {
   avatar_url: string | null;
   website: string | null;
   role: 'user' | 'admin' | 'moderator';
+  email?: string;
 }
 
 interface AuthContextType {

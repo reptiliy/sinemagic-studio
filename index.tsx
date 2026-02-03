@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 
 class GlobalErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean, error: any, errorInfo: any}> {
-  constructor(props: any) {
+  constructor(props: {children: React.ReactNode}) {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }

@@ -6,6 +6,7 @@ import { Users, Shield, Search, RefreshCw, Save, Lock, Unlock, Star, Trash2 } fr
 interface ExtendedProfile extends Profile {
   is_blocked?: boolean;
   is_vip?: boolean;
+  email?: string;
 }
 
 const AdminSettings: React.FC = () => {
@@ -183,7 +184,7 @@ const AdminSettings: React.FC = () => {
                       </div>
                     </td>
                     <td className="py-4 px-4 text-gray-300">
-                      {(p as any)?.email || '—'}
+                      {p.email || '—'}
                     </td>
                     <td className="py-4 px-4 text-center">
                       <select
