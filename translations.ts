@@ -132,7 +132,13 @@ export const translations: Record<Language, any> = {
       rights: 'Все права защищены',
       privacy: 'Политика конфиденциальности',
       terms: 'Условия использования',
-      social: 'Социальные сети'
+      social: 'Социальные сети',
+      desc: 'Создавайте виральный контент, используя передовые AI модели.',
+      home: 'Главная',
+      about: 'О нас',
+      help: 'Помощь',
+      telegram: 'Telegram',
+      copyright: '© 2024 Sinemagic Studio. Все права защищены.'
     },
     bento: {
        card1_title: 'Ультра-быстрый рендеринг',
@@ -422,7 +428,13 @@ export const translations: Record<Language, any> = {
       rights: 'Alle Rechte vorbehalten',
       privacy: 'Datenschutzrichtlinie',
       terms: 'Nutzungsbedingungen',
-      social: 'Soziale Netzwerke'
+      social: 'Soziale Netzwerke',
+      desc: 'Erstellen Sie viralen Content mit fortschrittlichen AI-Modellen.',
+      home: 'Startseite',
+      about: 'Über uns',
+      help: 'Hilfe',
+      telegram: 'Telegram',
+      copyright: '© 2024 Sinemagic Studio. Alle Rechte vorbehalten.'
     },
     bento: {
        card1_title: 'Ultraschnelles Rendering',
@@ -564,7 +576,13 @@ export const translations: Record<Language, any> = {
       rights: 'Всі права захищені',
       privacy: 'Політика конфіденційності',
       terms: 'Умови використання',
-      social: 'Соціальні мережі'
+      social: 'Соціальні мережі',
+      desc: 'Створюйте віральний контент, використовуючи передові AI моделі.',
+      home: 'Головна',
+      about: 'Про нас',
+      help: 'Допомога',
+      telegram: 'Telegram',
+      copyright: '© 2024 Sinemagic Studio. Всі права захищені.'
     },
     bento: {
        card1_title: 'Ультра-швидкий рендеринг',
