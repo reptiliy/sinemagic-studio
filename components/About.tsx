@@ -5,12 +5,12 @@ import { useLanguage } from '../LanguageContext';
 const About: React.FC = () => {
   const { t } = useLanguage();
 
-  const SKILLS = [
-    { name: t('about.stack_1_name') || 'AI Video Synthesis', level: '98%', icon: 'video', desc: t('about.stack_1_desc') || 'Kling, Veo, Luma' },
-    { name: t('about.stack_2_name') || 'Neural Architectures', level: '92%', icon: 'cpu', desc: t('about.stack_2_desc') || 'LLM & Custom Models' },
-    { name: t('about.stack_3_name') || 'Viral Automation', level: '95%', icon: 'zap', desc: t('about.stack_3_desc') || 'Content Multiplier' },
-    { name: t('about.stack_4_name') || 'Bot Development', level: '99%', icon: 'bot', desc: t('about.stack_4_desc') || 'Telegram & Web SDK' }
-  ];
+const SKILLS = [
+  { name: 'AI Video Synthesis', level: '98%', icon: 'video', desc: 'Kling, Veo, Luma' },
+  { name: 'Neural Architectures', level: '92%', icon: 'cpu', desc: 'LLM & Custom Models' },
+  { name: 'Viral Automation', level: '95%', icon: 'zap', desc: 'Content Multiplier' },
+  { name: 'Bot Development', level: '99%', icon: 'bot', desc: 'Telegram & Web SDK' }
+];
 
   const STATS = [
     { label: t('about.years'), value: '20+' },
@@ -19,6 +19,7 @@ const About: React.FC = () => {
     { label: t('about.models'), value: '12' }
   ];
 
+const About: React.FC = () => {
   useEffect(() => {
     if ((window as any).lucide) {
       (window as any).lucide.createIcons();

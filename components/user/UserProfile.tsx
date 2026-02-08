@@ -3,6 +3,7 @@ import { useAuth } from '../../AuthContext';
 import { supabase } from '../../lib/supabase';
 import Header from '../Header';
 import Footer from '../Footer';
+import VideoGenerator from './VideoGenerator';
 import { 
   User, Settings, LogOut, Shield, Video, Image as ImageIcon, 
   Box, CreditCard, LayoutDashboard, Sparkles, Zap
@@ -259,21 +260,20 @@ const UserProfile: React.FC = () => {
               </div>
             )}
 
-            {(activeTab === 'videos' || activeTab === 'images' || activeTab === 'models') && (
+            {activeTab === 'videos' && <VideoGenerator />}
+
+            {(activeTab === 'images' || activeTab === 'models') && (
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-500 min-h-[400px] flex flex-col items-center justify-center">
                 <div className="w-24 h-24 rounded-full bg-white/5 flex items-center justify-center mb-6">
-                  {activeTab === 'videos' && <Video className="w-10 h-10 text-gray-400" />}
                   {activeTab === 'images' && <ImageIcon className="w-10 h-10 text-gray-400" />}
                   {activeTab === 'models' && <Box className="w-10 h-10 text-gray-400" />}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  {activeTab === 'videos' && 'Генерация видео'}
                   {activeTab === 'images' && 'Генерация изображений'}
                   {activeTab === 'models' && 'Модели генерации'}
                 </h3>
                 <p className="text-gray-400 max-w-md mx-auto mb-8">
                   Этот раздел находится в разработке. Скоро здесь появятся инструменты для 
-                  {activeTab === 'videos' && ' создания уникальных видеороликов с помощью ИИ.'}
                   {activeTab === 'images' && ' генерации профессиональных изображений.'}
                   {activeTab === 'models' && ' выбора и настройки моделей искусственного интеллекта.'}
                 </p>
