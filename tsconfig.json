@@ -34,6 +34,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "temp_skill_clone"
   ]
 }

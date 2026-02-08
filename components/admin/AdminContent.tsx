@@ -73,7 +73,7 @@ const AdminContent: React.FC = () => {
   } = useContent();
   const [editValues, setEditValues] = useState<Record<string, string>>({});
   const [saving, setSaving] = useState<Record<string, boolean>>({});
-  const [activeTab, setActiveTab] = useState<'sections' | 'content' | 'video' | 'pages'>('sections');
+  const [activeTab, setActiveTab] = useState<'sections' | 'content' | 'video' | 'pages' | 'store'>('sections');
   const [activeGroup, setActiveGroup] = useState<string>('header'); // For content tab sidebar
   const [filter, setFilter] = useState('');
   const [currentLang, setCurrentLang] = useState('ru');
